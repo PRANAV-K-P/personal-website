@@ -27,14 +27,14 @@ function isname(){
 }
 
 function ValidateName(){
-    var letters = /^[A-Za-z]+$/;
+
     var y = document.getElementById("name").value;
     z=y.length
     if(z == 0)
     {
         document.getElementById("nameWarning").innerHTML= "Name cannot be empty"
     } 
-    else if(/^[A-Za-z ]+$/.test(y))
+    else if(/^[A-Za-z]+[ A-Za-z]+$/.test(y))
     {
         document.getElementById("nameWarning").innerHTML= ""
     }
